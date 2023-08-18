@@ -29,7 +29,8 @@ const NavContainer = styled.div`
   height: 60px;
   z-index: 1;
   width: 100%;
-  padding: 0 24px;
+  margin: - 100px;
+  padding: 0 12px;
   max-width: 1200px;
 `;
 
