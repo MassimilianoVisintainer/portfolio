@@ -6,7 +6,6 @@ import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { useTheme } from 'styled-components';
 
-
 const Nav = styled.div`
 background-color: ${({ theme }) => theme.card_light};
 height: 80px;
@@ -29,7 +28,6 @@ const NavContainer = styled.div`
   height: 60px;
   z-index: 1;
   width: 100%;
-  margin: - 100px;
   padding: 0 12px;
   max-width: 1200px;
 `;
@@ -122,7 +120,7 @@ transition: all 0.6s ease-in-out;
   }
 `;
 
-export const Span = styled.div`
+const Span = styled.div`
     padding: 0 4px;
     font-weight: bold;
     font-size: 18px;
@@ -162,7 +160,6 @@ const MobileLink = styled.a`
   }
 `;
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme()
@@ -170,31 +167,26 @@ const Navbar = () => {
   return (
     <Nav>
       <NavContainer>
-
         <NavLogo to='/'>
           <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
             <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
           </a>
         </NavLogo>
-
         <MobileIcon>
           <FaBars onClick={() => {
             setIsOpen(!isOpen)
           }} />
         </MobileIcon>
-
         <NavItems>
           <NavLink href="#about">About</NavLink>
           <NavLink href='#skills'>Skills</NavLink>
           <NavLink href='#experience'>Experience</NavLink>
           <NavLink href='#projects'>Projects</NavLink>
-          <NavLink href='#education'>Education</NavLink>
+          <NavLink href='#contact'>Contact</NavLink>
         </NavItems>
-
         <ButtonContainer>
-          <GitHubButton>GitHub Profile</GitHubButton>
+          <GitHubButton href={Bio.github} target='display'>GitHub Profile</GitHubButton>
         </ButtonContainer>
-
         {
           isOpen &&
           <MobileMenu isOpen={isOpen}>
@@ -214,12 +206,9 @@ const Navbar = () => {
               setIsOpen(!isOpen)
             }}>Education</MobileLink>
             <GitHubButton style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }} href={Bio.github} target="_blank">Github Profile</GitHubButton>
-
           </MobileMenu>
         }
-
       </NavContainer>
-
     </Nav>
   );
 };
