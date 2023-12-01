@@ -190,7 +190,7 @@ export const projects = [
         tags: [
             "Java",
         ],
-        category: "other",
+        category: "Java",
         github: "https://github.com/MassimilianoVisintainer/temperatureConverter",
     },  
 ];

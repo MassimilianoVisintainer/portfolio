@@ -236,7 +236,7 @@ const HeroSection = () => {
             <LinkedinButton href={Bio.linkedin} target='display'>Check my Linkedin Profile</LinkedinButton>
           </HeroLeftContainer>
           <HeroRightContainer>
-            <Img src="https://media.licdn.com/dms/image/C4D03AQHRK2R8XQIlwg/profile-displayphoto-shrink_800_800/0/1663488457436?e=1697673600&v=beta&t=7_HhHIjjIEWcCUi3EBjqvDCx5OV0N3RM61Peiv_A9kw" />
+            <Img src="https://media.licdn.com/dms/image/C4D03AQHRK2R8XQIlwg/profile-displayphoto-shrink_400_400/0/1663488457436?e=2147483647&v=beta&t=CqmhMhFLGn7C2OBTwreyzYxrtiierliIkY-t_95Uafc" />
           </HeroRightContainer>
           </HeroInnerContainer>
       </HeroContainer>

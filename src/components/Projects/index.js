@@ -135,11 +135,11 @@ const Projects = ({openModal,setOpenModal}) => {
                         :
                         <ToggleButton value="Backend" onClick={() => setToggle('Backend')}>BACKEND</ToggleButton>
                     }
-
-                    {toggle === 'other' ?
-                        <ToggleButton active value="other" onClick={() => setToggle('other')} >OTHER</ToggleButton>
+                    <Divider />
+                    {toggle === 'Java' ?
+                        <ToggleButton active value="Java" onClick={() => setToggle('Java')} >JAVA</ToggleButton>
                         :
-                        <ToggleButton value="other" onClick={() => setToggle('other')} >OTHER</ToggleButton>
+                        <ToggleButton value="Java" onClick={() => setToggle('Java')} >JAVA</ToggleButton>
                     }
                 </ToggleButtonGroup>
 
@@ -149,7 +149,7 @@ const Projects = ({openModal,setOpenModal}) => {
               <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
             ))}
           {projects
-            .filter((item) => item.category == toggle)
+            .filter((item) => item.category === toggle)
             .map((project) => (
               <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
             ))}
